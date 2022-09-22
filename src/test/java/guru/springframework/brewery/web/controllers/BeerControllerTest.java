@@ -69,7 +69,7 @@ class BeerControllerTest {
     void testGetBeerById() throws Exception {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssZ");
 
-        given(beerService.findBeerById(any())).willReturn(validBeer);
+       given(beerService.findBeerById(any())).willReturn(validBeer);
 
        MvcResult result=  mockMvc.perform(get("/api/v1/beer/" + validBeer.getId()))
                 .andExpect(status().isOk())
